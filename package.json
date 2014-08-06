@@ -1,0 +1,27 @@
+{
+  "name": "hikari-no-ghost-theme",
+  "version": "1.0.0",
+  "description": "Theme for the Ghost blogging platform",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/belen-albeza/hikari-no-ghost-theme.git"
+  },
+  "keywords": [
+    "ghost",
+    "themes"
+  ],
+  "author": "Belén Albeza <belen.albeza@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/belen-albeza/hikari-no-ghost-theme/issues"
+  },
+  "homepage": "https://github.com/belen-albeza/hikari-no-ghost-theme",
+  "dependencies": {
+    "grunt": "^0.4.5",
+    "grunt-sass": "^0.14.0"
+  }
+}
