@@ -22,6 +22,8 @@
   "homepage": "https://github.com/belen-albeza/hikari-no-ghost-theme",
   "dependencies": {
     "grunt": "^0.4.5",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-watch": "^0.6.1",
     "grunt-sass": "^0.14.0"
   }
 }
