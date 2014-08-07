@@ -1,0 +1,48 @@
+{{!< default}}
+
+{{! The comment above "< default" means - insert everything in this file into
+    the {body} of the default.hbs template, which contains our header/footer. }}
+
+{{! The big featured header on the homepage, with the site logo }}
+<header class="main-header" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}}>
+    {{#if @blog.logo}}
+        <p><a href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="logo" /></a></p>
+    {{else}}
+        <h1><a href="{{@blog.url}}">{{@blog.title}}</a></h1>
+    {{/if}}</a></p>
+</header>
+
+<main>
+    {{#post}}
+    <article class="{{post_class}} single">
+        {{! Each post has the blog logo at the top, with a link back to the home page }}
+        <header>
+            <h1>{{{title}}}</h1>
+        </header>
+
+        {{! Everything inside the #post tags pulls data from the post }}
+        {{content}}
+
+        <footer class="post-footer">
+            <p class="meta">
+                <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time>
+                <span class="tags">{{tags prefix="on "}}</span>
+            </p>
+
+            <p class="share">
+                Share this post on<br>
+                <a class="reddit" href="http://www.reddit.com/submit?url={{url absolute="true"}}&title={{title}}"><span>Reddit</span></a>
+                <a class="twitter" href="https://twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;"><span>Twitter</span></a>
+                <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
+                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;"><span>Facebook</span></a>
+                <a class="google-plus" href="https://plus.google.com/share?url={{url absolute="true"}}"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;"><span>Google+</span></a>
+            </p>
+
+        </footer>
+
+        {{/post}}
+
+    </article>
+</main>

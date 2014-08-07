@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {{! Document Settings }}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    {{! Page Meta }}
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
+
+    {{! Styles'n'Scripts }}
+    <link rel="stylesheet" type="text/css" href="{{asset "css/main.css"}}" />
+
+    {{! Ghost outputs important style and meta data with this tag }}
+    {{ghost_head}}
+</head>
+
+<body class="{{body_class}}">
+    {{! Everything else gets inserted here }}
+    {{{body}}}
+
+    <footer class="main-footer">
+        <p>
+            <a class="subscribe" href="{{@blog.url}}/rss/"><span>Feed</span></a>
+            {{! Put here your own twitter link}}
+            {{!-- <a class="twitter" href="https://www.twitter.com/ladybenko"><span>@ladybenko</span></a> --}}
+            {{! Github is also available}}
+            {{!-- <a class="github" href="https://www.github.com/belen-albeza"><span>belen-albeza</span></a> --}}
+        </p>
+
+        <p>&copy; {{date format="YYYY"}} {{@blog.title}}. All rights reserved.<br>
+        Powered by <a href="https://ghost.org">Ghost</a> and <a href="https://github.com/belen-albeza/hikari-no-ghost-theme">Hikari no Ghost</a>.</p>
+    </footer>
+
+    {{! Ghost outputs important scripts and data with this tag }}
+    {{ghost_foot}}
+
+    {{! syntax highlighting }}
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+
+    {{! video responsive resizing}}
+    <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
+    <script src="{{asset "js/index.js"}}"></script>
+</body>
+</html>

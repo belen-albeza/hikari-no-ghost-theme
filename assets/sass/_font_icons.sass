@@ -1,0 +1,44 @@
+// lightweight version of https://gist.github.com/mbreit/4267177
+
+$fontawesome_path: "../fonts/" !default
+
+@font-face
+  font-family: 'FontAwesome'
+  src: url('#{$fontawesome_path}/fontawesome-webfont.woff') format("woff")
+  font-weight: normal
+  font-style: normal
+
+@mixin icon($icon)
+  @extend %icon
+  content: $icon
+  color: #000
+
+@mixin icon-before($icon, $padding: 0)
+  &:before
+    +icon($icon)
+    padding-right: $padding
+
+@mixin icon-after($icon, $padding: 0)
+  &:after
+    +icon($icon)
+    padding-left: $padding
+
+%icon
+  font-family: FontAwesome
+  font-weight: normal
+  font-style: normal
+  display: inline-block
+  text-decoration: inherit
+  line-height: 1
+  speak: none
+
+$icon-twitter: "\f099"
+$icon-twitter-square: "\f081"
+$icon-rss: "\f09e"
+$icon-github: "\f09b"
+$icon-facebook: "\f09a"
+$icon-facebook-square: "\f082"
+$icon-google-plus: "\f0d5"
+$icon-google-plus-square: "\f0d4"
+$icon-reddit: "\f1a1"
+$icon-reddit-square: "\f1a2"

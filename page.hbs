@@ -1,0 +1,29 @@
+{{!< default}}
+
+{{! This is a page template. A page outputs content just like any other post, and has all the same
+    attributes by default, but you can also customise it to behave differently if you prefer. }}
+
+
+{{! The big featured header on the homepage, with the site logo }}
+<header class="main-header" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}}>
+    {{#if @blog.logo}}
+        <p><a href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="logo" /></a></p>
+    {{else}}
+        <h1><a href="{{@blog.url}}">{{@blog.title}}</a></h1>
+    {{/if}}</a></p>
+</header>
+
+<main>
+    {{#post}}
+    <article class="{{post_class}} single">
+        {{! Each post has the blog logo at the top, with a link back to the home page }}
+        <header>
+            <h1>{{{title}}}</h1>
+        </header>
+
+        {{! Everything inside the #post tags pulls data from the post }}
+        {{content}}
+
+    {{/post}}
+    </article>
+</main>
