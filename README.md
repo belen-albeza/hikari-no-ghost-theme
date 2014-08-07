@@ -2,6 +2,8 @@
 
 Theme for the Ghost blogging platform. Source code available at [https://github.com/belen-albeza/hikari-no-ghost-theme/](https://github.com/belen-albeza/hikari-no-ghost-theme/).
 
+[![Preview](/screenshot-preview.png?raw=true)](/screenshot.png?raw=true)
+
 ## Installation
 
 If you are using [Ghost.org](http://ghost.org)'s Pro platform, follow the instructions at [http://support.ghost.org/upload-theme-ghostpro/](http://support.ghost.org/upload-theme-ghostpro/).
