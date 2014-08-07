@@ -1,6 +1,6 @@
 {
   "name": "hikari-no-ghost-theme",
-  "version": "0.0.9",
+  "version": "1.0.0",
   "description": "Theme for the Ghost blogging platform",
   "main": "Gruntfile.js",
   "scripts": {
