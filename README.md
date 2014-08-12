@@ -6,6 +6,8 @@ Theme for the Ghost blogging platform. Source code available at [https://github.
 
 ## Installation
 
+This theme works with **Ghost 0.4** or newer.
+
 If you are using [Ghost.org](http://ghost.org)'s Pro platform, follow the instructions at [http://support.ghost.org/upload-theme-ghostpro/](http://support.ghost.org/upload-theme-ghostpro/).
 
 If you are hosting your own Ghost installation, follow these steps:
@@ -92,9 +94,12 @@ grunt run
 
 ## Changelog
 
-### 1.0.0
+### 1.0.X
 
-- First version.
+- 1.0.1
+    - Fixed navigation footer styles
+- 1.0.0
+    - First version.
 
 ## License
 
