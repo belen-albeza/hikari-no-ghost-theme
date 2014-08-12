@@ -197,9 +197,23 @@ main
   max-width: $page-width
 
 nav.pagination
-  +divider(#ccc)
+  text-align: center
   margin-top: 6rem
   line-height: 3.2rem
+  span.page-number
+    margin-left: 0.25rem
+    margin-right: 0.25rem
+    display: inline-block
+    &:not(:first-child):before, &:not(:last-child):after
+      display: inline-block
+      content: " ● "
+      margin-left: 1rem
+      margin-right: 1rem
+      color: #000
+      opacity: 0.1
+  a
+    font-style: italic
+    text-decoration: none
 
 header.tag-archive-header
   text-align: center

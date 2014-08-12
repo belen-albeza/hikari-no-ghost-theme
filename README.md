@@ -2,7 +2,11 @@
 
 Theme for the Ghost blogging platform. Source code available at [https://github.com/belen-albeza/hikari-no-ghost-theme/](https://github.com/belen-albeza/hikari-no-ghost-theme/).
 
+[![Preview](/screenshot-preview.png?raw=true)](/screenshot.png?raw=true)
+
 ## Installation
+
+This theme works with **Ghost 0.4** or newer.
 
 If you are using [Ghost.org](http://ghost.org)'s Pro platform, follow the instructions at [http://support.ghost.org/upload-theme-ghostpro/](http://support.ghost.org/upload-theme-ghostpro/).
 
@@ -90,9 +94,12 @@ grunt run
 
 ## Changelog
 
-### 1.0.0
+### 1.0.X
 
-- First version.
+- 1.0.1
+    - Fixed navigation footer styles
+- 1.0.0
+    - First version.
 
 ## License
 
