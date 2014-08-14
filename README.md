@@ -95,6 +95,8 @@ grunt run
 
 ### 1.0.X
 
+- 1.0.3
+    + Blog cover image now fills up the whole header
 - 1.0.2
     + Added top menu to static pages
     + Made images in posts to appear centered
