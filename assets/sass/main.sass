@@ -114,7 +114,7 @@ hr
 
 header.main-header
   flex: 0 0 auto
-  background-size: 100% auto
+  background-size: cover
   background-position: center 25%
   background-repeat: no-repeat
   background-color: #000
@@ -267,9 +267,11 @@ article.post
     font-weight: bold
   img
     max-width: 100%
+    display: block
+    margin: 0 auto
 
 article.post.single
-  & > header
+  &:not(.page) > header
     margin: 3rem 0rem
   & > footer
     margin-top: 4rem

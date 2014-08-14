@@ -11,8 +11,6 @@ module.exports = function (grunt) {
     },
     sass: {
       options: {
-        sourceComments: 'map',
-        sourceMap: 'sass',
         outputStyle: 'compressed'
       },
       dist: {

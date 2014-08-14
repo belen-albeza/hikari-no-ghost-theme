@@ -28,6 +28,7 @@ If you need to change some wording, etc. you can edit the files with `.hbs` exte
 - `page.hbs`: What gets rendered when you are viewing a static page.
 - `post.hbs`: What gets rendered when you are viewing a single post.
 - `tag.hbs`: What gets rendered when you are filtering posts by tags.
+- `partials/menu.hbs`: What gets rendered as the menu
 
 ### Adding Twitter and Github buttons in the footer
 
@@ -54,18 +55,16 @@ This theme assumes you have an *About* static page with the slug `about`. To cre
 
 ### Adding / removing static pages
 
-If you don't need the *About* page you can get rid of the menu by editing `index.hbs` and comment/deleting these lines:
+If you don't need the *About* page you can get rid of the menu by editing `partials/menu.hbs` and deleting these lines:
 
 ```
-{{! Comment this section if you are not using static pages }}
 <nav class="main-menu"><ul>
     <li><a href="/about/">About</a></li>
     {{! Add there all your static pages}}
 </ul></nav>
-{{! -- end of static pages menu }}
 ```
 
-If you need to add more static pages, just add more links to that list.
+If you need to add more static pages, just add more links to that `<ul>` list.
 
 ## Development
 
@@ -96,10 +95,15 @@ grunt run
 
 ### 1.0.X
 
+- 1.0.3
+    + Blog cover image now fills up the whole header
+- 1.0.2
+    + Added top menu to static pages
+    + Made images in posts to appear centered
 - 1.0.1
-    - Fixed navigation footer styles
+    + Fixed navigation footer styles
 - 1.0.0
-    - First version.
+    + First version.
 
 ## License
 

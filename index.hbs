@@ -9,13 +9,8 @@
     <h1>{{@blog.title}}<span class="subtitle">{{@blog.description}}</span></h1>
 </header>
 
-{{! Comment this section if you are not using static pages }}
-<nav class="main-menu"><ul>
-    <li><a href="/about/">About</a></li>
-    <li><a href="/vault/">Archives</a></li>
-    {{! Add there all your static pages}}
-</ul></nav>
-{{! -- end of static pages menu }}
+{{! Comment this if you are not using static pages }}
+{{> menu}}
 
 {{! The main content area on the homepage }}
 <main>
