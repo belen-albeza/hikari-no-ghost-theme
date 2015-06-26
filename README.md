@@ -66,6 +66,35 @@ If you don't need the *About* page you can get rid of the menu by editing `parti
 
 If you need to add more static pages, just add more links to that `<ul>` list.
 
+### Syntax highlighting
+
+If you are a technical writer and embed source code samples in your posts, you can get syntax highlighting with [prism](http://www.prismjs.com).
+
+When you are editing your post, simple attach `language-xxxx` to the triple backtick code block, where `xxxx` is the identifier of the language you are using.
+
+Example of use within Ghost's editor:
+
+```
+```language-ruby
+class Vader
+  def hi
+    puts "I am your father"
+  end
+end
+```
+
+Included languages are:
+
+- `language-clike` (C-like languages)
+- `language-markup` (HTML)
+- `language-css`, `language-less` and `language-sass`
+- `language-javascript`
+- `language-markdown`
+- `language-python`
+- `language-ruby`
+
+If you need extra languages, download a new custom version of prism and overwrite the `prism.js` file included in `assets/js`.
+
 ## Development
 
 If you want to play around, you'll need:
@@ -93,6 +122,12 @@ grunt run
 
 ## Changelog
 
+### 1.1.X
+
+- 1.1.0
+  - Made the theme forwards-compatible regarding jQuery. See [No more jQuery in ghost_foot](http://dev.ghost.org/no-more-jquery/)
+  - Changed the syntax highlighting library to be [prism](http://www.prismjs.com) instead of Google's `prettify`.
+
 ### 1.0.X
 
 - 1.0.3
@@ -111,4 +146,4 @@ grunt run
 
 Source code released under the MIT license. See `LICENSE` for details.
 
-[Font Awesome](https://github.com/FortAwesome/Font-Awesome/) font (`assets/fonts/fontawesome-webfont.woff`) is licensed under the [SIL Open Font License 1.1](http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL). 
+[Font Awesome](https://github.com/FortAwesome/Font-Awesome/) font (`assets/fonts/fontawesome-webfont.woff`) is licensed under the [SIL Open Font License 1.1](http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL).
