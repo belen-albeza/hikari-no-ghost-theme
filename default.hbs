@@ -16,6 +16,7 @@
 
     {{! Styles'n'Scripts }}
     <link rel="stylesheet" type="text/css" href="{{asset "css/main.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/prism.css"}}" />
 
     {{! Ghost outputs important style and meta data with this tag }}
     {{ghost_head}}
@@ -41,8 +42,15 @@
     {{! Ghost outputs important scripts and data with this tag }}
     {{ghost_foot}}
 
-    {{! syntax highlighting }}
-    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+    {{! Forwards compatibility regarding jQuery }}
+    <script type="text/javascript">
+    if (typeof jQuery == 'undefined') {
+      document.write('<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></'+'script>');
+    }
+    </script>
+
+    {{! syntax highlighting with prism }}
+    <script src="{{asset "js/prism.js"}}"></script>
 
     {{! video responsive resizing}}
     <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
