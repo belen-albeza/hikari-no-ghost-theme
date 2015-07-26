@@ -17,15 +17,15 @@
     {{! Each post will be output using this markup }}
     {{#foreach posts}}
 
-    <article class="{{post_class}}">
+    <article class="h-entry {{post_class}}">
         <header>
-            <h1><a href="{{url}}">{{{title}}}</a></h1>
+            <h1 class="p-name"><a href="{{url}}">{{{title}}}</a></h1>
         </header>
 
-        <p>{{excerpt}}… <a href="{{url}}" class="more">Read more</a></p>
+        <p class="p-summary">{{excerpt}}… <a class="u-url" href="{{url}}" class="more">Read more</a></p>
         <footer>
             <p class="meta">
-                <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time>
+                <time class="dt-published" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time>
                 <span class="tags">{{tags prefix="on "}}</span>
             </p>
         </footer>
