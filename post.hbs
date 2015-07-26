@@ -14,18 +14,20 @@
 
 <main>
     {{#post}}
-    <article class="{{post_class}} single">
+    <article class="h-entry {{post_class}} single">
         {{! Each post has the blog logo at the top, with a link back to the home page }}
         <header>
-            <h1>{{{title}}}</h1>
+            <h1 class="p-name" >{{{title}}}</h1>
         </header>
 
+	<div class="e-content">
         {{! Everything inside the #post tags pulls data from the post }}
         {{content}}
+ 	</div>
 
         <footer class="post-footer">
             <p class="meta">
-                <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time>
+                <time class="dt-published" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time>
                 <span class="tags">{{tags prefix="on "}}</span>
             </p>
 
