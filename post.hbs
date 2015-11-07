@@ -20,7 +20,9 @@
             <h1>{{{title}}}</h1>
             {{#if tags}}
                 <span class="tags">
-                    {{tags separator=""}}
+                    {{#foreach tags }}
+                        <a href="{{url}}" class="tag tag-{{slug}}">{{name}}</a>
+                    {{/foreach}}
                 </span>
             {{/if}}
         </header>
