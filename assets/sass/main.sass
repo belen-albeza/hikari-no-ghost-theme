@@ -25,6 +25,11 @@ $page-width: 75rem
   &:after
     margin: 0 -70% 0 2%
 
+@mixin tag($color)
+  background-color: $color
+  &:hover
+    background-color: darken($color, 10)
+
 // extensions
 
 %icon-link
@@ -90,7 +95,7 @@ pre
   word-wrap: break-word
   border-radius: 0.3rem
   padding: 1rem
-  line-height: 1.5em;
+  line-height: 1.5em
 
 ul, ol
   margin-left: 4rem
@@ -244,6 +249,9 @@ article.post
       line-height: 4.5rem
       a
         text-decoration: none
+    span.tags
+      margin-top: 2rem
+      display: inline-block
   & > footer
     text-align: center
     .meta
@@ -306,3 +314,25 @@ a.google-plus
   +icon-before($icon-google-plus-square)
 a.reddit
   +icon-before($icon-reddit)
+
+span.tags
+  a.tag
+    +tag(#aaa)
+    color: #fff
+    font-size: 14px
+    font-weight: bold
+    padding: 0.3rem 1rem
+    margin: 0.3rem
+    text-decoration: none
+    text-transform: uppercase
+    &.tag.tag-tag-tag
+      +tag(#53b0de)
+
+p.meta
+  span.tags
+    a.tag
+      font-size: 12px
+      margin: 0.1rem
+      padding: 0.4rem 1rem
+      &:first-child
+        margin-left: 1.5rem
