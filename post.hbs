@@ -18,6 +18,11 @@
         {{! Each post has the blog logo at the top, with a link back to the home page }}
         <header>
             <h1>{{{title}}}</h1>
+            {{#if tags}}
+                <span class="tags">
+                    {{tags separator=""}}
+                </span>
+            {{/if}}
         </header>
 
         {{! Everything inside the #post tags pulls data from the post }}
@@ -25,8 +30,7 @@
 
         <footer class="post-footer">
             <p class="meta">
-                <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time>
-                <span class="tags">{{tags prefix="on "}}</span>
+                Posted on <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time>
             </p>
 
             <p class="share">
