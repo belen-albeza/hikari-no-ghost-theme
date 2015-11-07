@@ -25,6 +25,11 @@ $page-width: 75rem
   &:after
     margin: 0 -70% 0 2%
 
+@mixin tag($color)
+  background-color: $color
+  &:hover
+    background-color: darken($color, 10)
+
 // extensions
 
 %icon-link
@@ -310,11 +315,9 @@ a.google-plus
 a.reddit
   +icon-before($icon-reddit)
 
-
-
 span.tags
-  a
-    background-color: #53b0de
+  a.tag
+    +tag(#aaa)
     color: #fff
     font-size: 14px
     font-weight: bold
@@ -322,5 +325,14 @@ span.tags
     margin: 0.3rem
     text-decoration: none
     text-transform: uppercase
-    &:hover
-      background-color: darken(#53b0de, 10)
+    &.tag.tag-tag-tag
+      +tag(#53b0de)
+
+p.meta
+  span.tags
+    a.tag
+      font-size: 12px
+      margin: 0.1rem
+      padding: 0.4rem 1rem
+      &:first-child
+        margin-left: 1.5rem
